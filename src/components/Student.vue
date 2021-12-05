@@ -1,7 +1,7 @@
 <!--
  * @Author: Evan Zhao
  * @Date: 2021-12-05 21:37:33
- * @LastEditTime: 2021-12-05 23:28:14
+ * @LastEditTime: 2021-12-05 23:38:15
  * @FilePath: \Vue_test1\src\components\Student.vue
 -->
 <template>
@@ -18,12 +18,10 @@
         name:'Student',
         data() {
             return {
-                msg:'我是一个学生',
-                name:'张三',
-                sex:'男',
-                age:18,
+                msg:'我是一个学生'
             }
         },
+        props:['name','age','sex']
     }
 </script>
 
