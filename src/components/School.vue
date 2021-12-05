@@ -1,7 +1,7 @@
 <!--
  * @Author: Evan Zhao
  * @Date: 2021-12-05 21:37:33
- * @LastEditTime: 2021-12-05 22:58:02
+ * @LastEditTime: 2021-12-05 23:10:17
  * @FilePath: \Vue_test1\src\components\School.vue
 -->
 <template>
@@ -16,8 +16,8 @@
         name:'School',
         data() {
             return {
-                name:'asss',
-                address:'xassss'
+                name:'嵩山派',
+                address:'少室山'
             }
         },
     }
