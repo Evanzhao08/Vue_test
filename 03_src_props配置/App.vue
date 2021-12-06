@@ -1,28 +1,20 @@
 <!--
  * @Author: Evan Zhao
  * @Date: 2021-12-05 21:33:23
- * @LastEditTime: 2021-12-06 23:04:56
+ * @LastEditTime: 2021-12-06 21:43:28
  * @FilePath: \Vue_test1\src\App.vue
 -->
 <template>
   <div>
-      <Student/>
-      <hr>
-      <School />
+      <Student name="李四" sex="女" />
+      
   </div>
 </template>
 
 <script>
     import Student from './components/Student.vue'
-    import School from './components/School.vue'
     export default {
         name:'App',
-        components:{Student,School},
+        components:{Student},
     }
 </script>
-
-<style>
-.title{
-    color: red;
-}
-</style>

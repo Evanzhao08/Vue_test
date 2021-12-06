@@ -1,8 +1,8 @@
 /*
  * @Author: Evan Zhao
  * @Date: 2021-12-05 21:33:10
- * @LastEditTime: 2021-12-06 22:54:14
- * @FilePath: \Vue_test1\src\main.js
+ * @LastEditTime: 2021-12-05 22:02:26
+ * @FilePath: \vue_test\src\main.js
  */
 import Vue from 'vue'
 import App from './App.vue'

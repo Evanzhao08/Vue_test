@@ -1,7 +1,7 @@
 <!--
  * @Author: Evan Zhao
  * @Date: 2021-12-05 21:33:23
- * @LastEditTime: 2021-12-06 23:04:56
+ * @LastEditTime: 2021-12-06 22:06:52
  * @FilePath: \Vue_test1\src\App.vue
 -->
 <template>
@@ -20,9 +20,3 @@
         components:{Student,School},
     }
 </script>
-
-<style>
-.title{
-    color: red;
-}
-</style>
