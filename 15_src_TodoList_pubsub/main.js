@@ -1,3 +1,9 @@
+/*
+ * @Author: Evan Zhao
+ * @Date: 2021-12-05 21:33:10
+ * @LastEditTime: 2021-12-10 22:42:31
+ * @FilePath: \Vue_test1\src\main.js
+ */
 import Vue from 'vue'
 import App from './App.vue'
 Vue.config.productionTip = false

@@ -1,0 +1,55 @@
+<!--
+ * @Author: Evan Zhao
+ * @Date: 2021-12-06 23:35:06
+ * @LastEditTime: 2021-12-10 21:26:41
+ * @FilePath: \Vue_test1\src\components\MyHeader.vue
+-->
+<template>
+  <div class="todo-header">
+    <input type="text" placeholder="请输入你的任务名称，按回车键确认" v-model="title" @keyup.enter="add"/>
+  </div>
+</template>
+
+<script>
+import {nanoid} from 'nanoid'
+export default {
+  name: "MyHeader",
+ // props:['addTodo'],
+  methods: {
+    add(){
+      if(!this.title.trim()) return window.confirm("输入不能为空！")
+      //将输入包装成一个todo对象
+      const todoObj = {id:nanoid(),title:this.title,done:false}
+      //通知App组件添加一个todo对象
+      //this.addTodo(todoObj);
+      this.$emit('addTodo',todoObj,1,2,3,4,5)
+      //清空输入
+      this.title=''
+    }
+  },
+  data() {
+    return {
+      title:'',
+    };
+  },
+};
+</script>
+
+<style scoped>
+/*header*/
+.todo-header input {
+  width: 560px;
+  height: 28px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 7px;
+}
+
+.todo-header input:focus {
+  outline: none;
+  border-color: rgba(82, 168, 236, 0.8);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(82, 168, 236, 0.6);
+}
+</style>
