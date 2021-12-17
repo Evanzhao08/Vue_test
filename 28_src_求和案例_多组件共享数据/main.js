@@ -9,7 +9,7 @@ Vue.config.productionTip = false
 // 使用插件
 Vue.use(vueResource)
 //创建vm
-new Vue({
+const vm = new Vue({
     el:'#app',
     store,
     render:h =>h(App),
@@ -17,3 +17,5 @@ new Vue({
         Vue.prototype.$bus = this
     },
 })
+
+console.log(vm);

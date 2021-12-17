@@ -23,10 +23,8 @@ export default {
   computed:{
     //借助mapState生成计算属性
     //...mapState({sum:'sum',school:'school',subject:'subject'})
-    ...mapState('countAbout',['school','sum','subject']),
-    ...mapState('personAbout',['personList']),
-    ...mapGetters('countAbout',['bigSum'])
-  
+    ...mapState(['school','sum','subject','personList']),
+    ...mapGetters(['bigSum'])
   },
   data() {
     return {
@@ -35,8 +33,16 @@ export default {
   },
   methods: {
     //借助mapMutations生成对应的方法，方法中会调用commit去联系mutations
-    ...mapMutations('countAbout',{increment:'JIA',decrement:'JIAN'}),
-    ...mapActions('countAbout',{incrementOdd:'jiaOdd',incrementWait:'jiaWait'})
+    ...mapMutations({increment:'JIA',decrement:'JIAN'}),
+    /* ******************************** */
+/*     incrementOdd() {
+      this.$store.dispatch('jiaOdd',this.n)
+    },
+    incrementWait() {
+      this.$store.dispatch('jiaWait',this.n)
+    }, */
+    //借助mapActions生成对应的方法，方法中会调用actions
+    ...mapActions({incrementOdd:'jiaOdd',incrementWait:'jiaWait'})
   },
   mounted() {
     console.log('Count',this.$store);
